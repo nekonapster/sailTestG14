@@ -24,6 +24,9 @@
             <flux:navlist.item icon="home" :href="route('dashboard')" wire:navigate>
                 {{ __('Gestión') }}
             </flux:navlist.item>
+            <flux:navlist.item icon="home" :href="route('dashboard')" wire:navigate>
+                {{ __('Planificación') }} 
+            </flux:navlist.item>
         @endif
 
         @if(auth()->user()->isRole('contable') || auth()->user()->isRole('admin'))
@@ -33,9 +36,10 @@
         @endif
 
         @if(auth()->user()->isRole('planificacion') || auth()->user()->isRole('admin'))
-            <flux:navlist.item icon="home" :href="route('dashboard')" wire:navigate>
-                {{ __('Planificación') }}
-            </flux:navlist.item>
+        <flux:navlist.item icon="home" :href="route('dashboard')" wire:navigate>
+            {{ __('Planificacion') }}
+        </flux:navlist.item>
+            
         @endif
                 
                 </flux:navlist.group>
