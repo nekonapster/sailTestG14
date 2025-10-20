@@ -1,0 +1,8 @@
+//Asignar roles a usuarios
+$user = App\Models\User::find(1); // o el ID del usuario que quieras
+$user->role = 'admin';
+$user->save();
+
+App\Models\User::find(2)->update(['role' => 'rrhh']);
+App\Models\User::find(3)->update(['role' => 'contable']);
+$user->save();
