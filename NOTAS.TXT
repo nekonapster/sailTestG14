@@ -1,5 +1,7 @@
-//Asignar roles a usuarios
-$user = App\Models\User::find(1); // o el ID del usuario que quieras
+//Asignar roles a usuarios desde tinker
+// o el ID del usuario que quieras
+sail tinker
+$user = App\Models\User::find(1);
 $user->role = 'admin';
 $user->save();
 
